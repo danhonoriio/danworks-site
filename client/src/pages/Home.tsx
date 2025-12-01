@@ -258,7 +258,7 @@ export default function Home() {
                     </div>
                     <div>
                       <div className="font-bold uppercase text-sm text-muted-foreground">Call Me</div>
-                      <div className="font-display text-xl">+31 6 1234 5678</div>
+                      <div className="font-display text-xl">+31 06 85 36 45 44</div>
                     </div>
                   </div>
                   
