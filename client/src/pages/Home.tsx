@@ -94,12 +94,12 @@ export default function Home() {
             <div className="inline-block bg-foreground text-white px-4 py-2 font-bold uppercase tracking-widest text-sm transform -rotate-2">
               Available in the Netherlands
             </div>
-            <h1 className="font-display text-6xl md:text-8xl leading-[0.9] uppercase">
+            <<h1 className="font-display text-4xl sm:text-5xl md:text-7xl leading-[0.95] uppercase">
               Fixing <br/>
-              <span className="text-primary">Everything</span> <br/>
+              <span className="text-primary">Everything</span> <br />
               You Need.
             </h1>
-            <p className="text-xl md:text-2xl font-medium max-w-md leading-relaxed text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl font-medium max-w-md leading-relaxed text-muted-foreground">
               Professional handyman services for your home and office. Reliable, skilled, and ready to work.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
