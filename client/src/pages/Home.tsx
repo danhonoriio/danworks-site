@@ -88,7 +88,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 md:pt-48 md:pb-32 px-4 border-b-4 border-foreground bg-secondary relative overflow-hidden">
+      <section className="pt-28 pb-16 md:pt-48 md:pb-32 px-4 border-b-4 border-foreground bg-secondary relative overflow-hidden">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div className="space-y-8">
             <div className="inline-block bg-foreground text-white px-4 py-2 font-bold uppercase tracking-widest text-sm transform -rotate-2">
@@ -130,11 +130,11 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 px-4 bg-background">
+      <section id="services" className="py-16 px-4 bg-background">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div>
-              <h2 className="font-display text-5xl md:text-6xl uppercase mb-4">What I Do</h2>
+              <h2 className="font-display text-4xl md:text-5xl uppercase mb-4">What I Do</h2>
               <div className="h-2 w-32 bg-primary"></div>
             </div>
             <p className="text-xl max-w-md font-medium text-right md:text-left">
@@ -175,10 +175,10 @@ export default function Home() {
       </section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-24 px-4 bg-secondary border-t-4 border-foreground">
+      <section id="gallery" className="py-16 px-4 bg-secondary border-t-4 border-foreground">
         <div className="container mx-auto">
           <div className="mb-16">
-            <h2 className="font-display text-5xl md:text-6xl uppercase mb-4">Recent Work</h2>
+            <h2 className="font-display text-4xl md:text-5xl uppercase mb-4">Recent Work</h2>
             <div className="h-2 w-32 bg-sidebar-primary"></div>
           </div>
           
@@ -218,7 +218,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Me */}
-      <section className="py-24 bg-foreground text-white border-y-4 border-foreground">
+      <section className="py-16 bg-foreground text-white border-y-4 border-foreground">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12 text-center">
             <div className="space-y-4">
@@ -241,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-4 bg-secondary">
+      <section id="contact" className="py-16 px-4 bg-secondary">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-white border-4 border-foreground shadow-[12px_12px_0px_0px_var(--sidebar-primary)] p-8 md:p-16">
             <div className="grid md:grid-cols-2 gap-16">
