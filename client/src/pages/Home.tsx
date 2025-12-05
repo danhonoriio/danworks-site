@@ -102,14 +102,15 @@ export default function Home() {
             <p className="text-base sm:text-lg md:text-xl font-medium max-w-md leading-relaxed text-muted-foreground">
               Professional handyman services for your home and office. Reliable, skilled, and ready to work.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="h-14 px-8 text-lg rounded-none border-2 border-foreground shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase">
-                Book Now
-              </Button>
-              <Button variant="outline" size="lg" className="h-14 px-8 text-lg rounded-none border-2 border-foreground shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all bg-white text-foreground font-bold uppercase">
-                View Services
-              </Button>
-            </div>
+<div className="flex flex-col sm:flex-row gap-4">
+  <Button
+    variant="outline"
+    size="lg"
+    className="h-14 px-8 text-lg rounded-none border-2 border-foreground shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all bg-white text-foreground font-bold uppercase"
+  >
+    View Services
+  </Button>
+</div>
           </div>
           <div className="relative">
             <div className="aspect-[4/3] border-4 border-foreground shadow-[12px_12px_0px_0px_var(--primary)] bg-white relative z-10 overflow-hidden group">
@@ -170,49 +171,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section id="gallery" className="py-16 px-4 bg-secondary border-t-4 border-foreground">
-        <div className="container mx-auto">
-          <div className="mb-16">
-            <h2 className="font-display text-4xl md:text-5xl uppercase mb-4">Recent Work</h2>
-            <div className="h-2 w-32 bg-sidebar-primary"></div>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="aspect-square border-4 border-foreground overflow-hidden group relative">
-              <img src="/service-furniture.jpg" alt="Furniture Assembly" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="font-display text-white text-xl uppercase">Furniture</span>
-              </div>
-            </div>
-            <div className="aspect-square border-4 border-foreground overflow-hidden group relative md:col-span-2 md:row-span-2">
-              <img src="/hero-renovation.jpg" alt="Full Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-sidebar-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="font-display text-white text-3xl uppercase">Renovation</span>
-              </div>
-            </div>
-            <div className="aspect-square border-4 border-foreground overflow-hidden group relative">
-              <img src="/service-electrical.jpg" alt="Electrical Work" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="font-display text-white text-xl uppercase">Electrical</span>
-              </div>
-            </div>
-            <div className="aspect-square border-4 border-foreground overflow-hidden group relative">
-              <img src="/service-carpentry.jpg" alt="Carpentry" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-sidebar-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="font-display text-white text-xl uppercase">Carpentry</span>
-              </div>
-            </div>
-            <div className="aspect-square border-4 border-foreground overflow-hidden group relative">
-              <img src="/service-flooring.jpg" alt="Flooring" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="font-display text-white text-xl uppercase">Flooring</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
