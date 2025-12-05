@@ -331,7 +331,7 @@ export default function Home() {
       <footer className="bg-foreground text-white py-12 border-t-4 border-primary">
   <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
     <div className="flex items-center gap-2">
-      <img src="/logo-footer.png" alt="Dan Works Logo" className="h-10 w-auto" />
+      <img src="/logo-footer.png" alt="Dan Works Logo" className="h-14 w-auto" />
       <span className="font-display text-xl tracking-tighter">DAN WORKS</span>
     </div>
     <div className="text-sm font-medium text-gray-400">
