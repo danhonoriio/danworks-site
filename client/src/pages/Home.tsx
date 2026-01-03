@@ -167,9 +167,6 @@ export default function Home() {
                         {service.description}
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 font-bold uppercase text-sm tracking-wider group-hover:text-primary transition-colors cursor-pointer">
-                      See Examples <ArrowRight className="w-4 h-4" />
-                    </div>
                   </div>
                 </div>
               </div>
