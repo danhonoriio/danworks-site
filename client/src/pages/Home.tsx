@@ -198,58 +198,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
+            {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-secondary">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-white border-4 border-foreground shadow-[12px_12px_0px_0px_var(--sidebar-primary)] p-8 md:p-16">
             <div className="grid md:grid-cols-2 gap-16">
               <div>
-                <h2 className="font-display text-5xl uppercase mb-6">Let's Work <br/> Together</h2>
+                <h2 className="font-display text-5xl uppercase mb-6">
+                  Let's Work <br /> Together
+                </h2>
+
                 <p className="text-lg font-medium mb-8 text-muted-foreground">
                   Ready to start your project? Fill out the form or contact me directly via WhatsApp.
                 </p>
-                
+
                 <div className="space-y-6">
-  {/* WhatsApp */}
-  <a
-    href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
-    target="_blank"
-    rel="noreferrer"
-    className="flex items-center gap-4 group"
-  >
-    <div className="w-12 h-12 bg-[#25D366] border-2 border-foreground flex items-center justify-center text-white">
-      <SiWhatsapp className="w-6 h-6" />
-    </div>
-    <div>
-      <div className="font-bold uppercase text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-        Contact Me
-      </div>
-      <div className="font-display text-xl group-hover:text-primary transition-colors">
-        +31 6 85 36 45 44
-      </div>
-    </div>
-  </a>
+                  {/* WhatsApp */}
+                  <a
+                    href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-4 group"
+                  >
+                    <div className="w-12 h-12 bg-[#25D366] border-2 border-foreground flex items-center justify-center text-white">
+                      <SiWhatsapp className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="font-bold uppercase text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                        Contact Me
+                      </div>
+                      <div className="font-display text-xl group-hover:text-primary transition-colors">
+                        +31 6 85 36 45 44
+                      </div>
+                    </div>
+                  </a>
 
-  {/* Email */}
-  <a
-    href="mailto:info@danworksnl.nl?subject=Quote%20Request%20-%20Dan%20Works"
-    className="flex items-center gap-4 group"
-  >
-    <div className="w-12 h-12 bg-primary border-2 border-foreground flex items-center justify-center text-white">
-      <Mail className="w-6 h-6" />
-    </div>
-    <div>
-      <div className="font-bold uppercase text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-        Email
-      </div>
-      <div className="font-display text-xl group-hover:text-primary transition-colors">
-        info@danworksnl.nl
-      </div>
-    </div>
-  </a>
-</div>
-
-                  </div>
+                  {/* Email */}
+                  <a
+                    href="mailto:info@danworksnl.nl?subject=Quote%20Request%20-%20Dan%20Works"
+                    className="flex items-center gap-4 group"
+                  >
+                    <div className="w-12 h-12 bg-primary border-2 border-foreground flex items-center justify-center text-white">
+                      <Mail className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="font-bold uppercase text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                        Email
+                      </div>
+                      <div className="font-display text-xl group-hover:text-primary transition-colors">
+                        info@danworksnl.nl
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
 
@@ -263,12 +263,17 @@ export default function Home() {
                         <FormItem>
                           <FormLabel className="font-bold uppercase">Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="Your Name" {...field} className="rounded-none border-2 border-foreground h-12 bg-white focus-visible:ring-0 focus-visible:border-primary" />
+                            <Input
+                              placeholder="Your Name"
+                              {...field}
+                              className="rounded-none border-2 border-foreground h-12 bg-white focus-visible:ring-0 focus-visible:border-primary"
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
+
                     <FormField
                       control={form.control}
                       name="email"
@@ -276,12 +281,17 @@ export default function Home() {
                         <FormItem>
                           <FormLabel className="font-bold uppercase">Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="your@email.com" {...field} className="rounded-none border-2 border-foreground h-12 bg-white focus-visible:ring-0 focus-visible:border-primary" />
+                            <Input
+                              placeholder="your@email.com"
+                              {...field}
+                              className="rounded-none border-2 border-foreground h-12 bg-white focus-visible:ring-0 focus-visible:border-primary"
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
+
                     <FormField
                       control={form.control}
                       name="message"
@@ -289,13 +299,21 @@ export default function Home() {
                         <FormItem>
                           <FormLabel className="font-bold uppercase">Message</FormLabel>
                           <FormControl>
-                            <Textarea placeholder="Tell me about your project..." {...field} className="rounded-none border-2 border-foreground min-h-[120px] bg-white focus-visible:ring-0 focus-visible:border-primary resize-none" />
+                            <Textarea
+                              placeholder="Tell me about your project..."
+                              {...field}
+                              className="rounded-none border-2 border-foreground min-h-[120px] bg-white focus-visible:ring-0 focus-visible:border-primary resize-none"
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
-                    <Button type="submit" className="w-full h-12 rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase text-lg">
+
+                    <Button
+                      type="submit"
+                      className="w-full h-12 rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase text-lg"
+                    >
                       Send Message
                     </Button>
                   </form>
@@ -305,6 +323,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       {/* Footer */}
       <footer className="bg-foreground text-white py-12 border-t-4 border-primary">
