@@ -8,7 +8,7 @@ import { z } from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { SiWhatsapp } from "react-icons/si";
-import { Wrench, Zap, Hammer, Ruler, ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import { Wrench, Zap, Hammer, Ruler, ArrowRight, CheckCircle2, Mail } from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -81,9 +81,12 @@ export default function Home() {
             <a href="#gallery" className="hover:text-primary transition-colors">Work</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </div>
-          <Button className="rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase">
-            Get a Quote
-          </Button>
+          <a href="#contact">
+  <Button className="rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase">
+    Get a Quote
+  </Button>
+</a>
+
         </div>
       </nav>
 
@@ -210,24 +213,45 @@ export default function Home() {
                 </p>
                 
                 <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-primary border-2 border-foreground flex items-center justify-center text-white">
-                      <Phone className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <div className="font-bold uppercase text-sm text-muted-foreground">Call Me</div>
-                      <div className="font-display text-xl">+31 06 85 36 45 44</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-[#25D366] border-2 border-foreground flex items-center justify-center text-white">
-                      <SiWhatsapp className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <div className="font-bold uppercase text-sm text-muted-foreground">WhatsApp</div>
-                      <div className="font-display text-xl">Chat Now</div>
-                    </div>
+  {/* WhatsApp */}
+  <a
+    href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
+    target="_blank"
+    rel="noreferrer"
+    className="flex items-center gap-4 group"
+  >
+    <div className="w-12 h-12 bg-[#25D366] border-2 border-foreground flex items-center justify-center text-white">
+      <SiWhatsapp className="w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-bold uppercase text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+        Contact Me
+      </div>
+      <div className="font-display text-xl group-hover:text-primary transition-colors">
+        +31 6 85 36 45 44
+      </div>
+    </div>
+  </a>
+
+  {/* Email */}
+  <a
+    href="mailto:info@danworksnl.nl?subject=Quote%20Request%20-%20Dan%20Works"
+    className="flex items-center gap-4 group"
+  >
+    <div className="w-12 h-12 bg-primary border-2 border-foreground flex items-center justify-center text-white">
+      <Mail className="w-6 h-6" />
+    </div>
+    <div>
+      <div className="font-bold uppercase text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+        Email
+      </div>
+      <div className="font-display text-xl group-hover:text-primary transition-colors">
+        info@danworksnl.nl
+      </div>
+    </div>
+  </a>
+</div>
+
                   </div>
                 </div>
               </div>
