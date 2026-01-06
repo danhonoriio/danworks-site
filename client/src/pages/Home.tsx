@@ -79,7 +79,6 @@ export default function Home() {
           </div>
           <div className="hidden md:flex gap-8 font-bold text-sm uppercase tracking-widest">
             <a href="#services" className="hover:text-primary transition-colors">Services</a>
-            <a href="#gallery" className="hover:text-primary transition-colors">Work</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </div>
           <a href="#contact">
@@ -106,7 +105,7 @@ export default function Home() {
             <p className="text-base sm:text-lg md:text-xl font-medium max-w-md leading-relaxed text-muted-foreground">
               Professional handyman services for your home and office. Reliable, skilled, and ready to work.
             </p>
-<div className="flex flex-col sm:flex-row gap-4">
+<a href="#services">
   <Button
     variant="outline"
     size="lg"
@@ -114,7 +113,7 @@ export default function Home() {
   >
     View Services
   </Button>
-</div>
+</a>
           </div>
           <div className="relative">
             <div className="aspect-[4/3] border-4 border-foreground shadow-[12px_12px_0px_0px_var(--primary)] bg-white relative z-10 overflow-hidden group">
