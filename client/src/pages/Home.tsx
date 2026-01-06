@@ -9,6 +9,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { SiWhatsapp } from "react-icons/si";
 import { Wrench, Zap, Hammer, Ruler, ArrowRight, CheckCircle2, Mail } from "lucide-react";
+import { Paintbrush } from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -38,11 +39,18 @@ export default function Home() {
 
   const services = [
     {
-      title: "Furniture Assembly",
-      description: "Professional assembly for IKEA, Jysk, and designer furniture. Fast, clean, and sturdy.",
-      icon: Wrench,
-      image: "/service-furniture.jpg",
-      color: "bg-primary",
+      title: "Carpentry & Furniture Assembly",
+  description: "IKEA/Jysk assembly, shelves, custom woodwork, door adjustments and repairs — clean, strong finish.",
+  icon: Hammer, // ou Wrench, você escolhe
+  image: "/service-carpentry-assembly.jpg",
+  color: "bg-primary",
+    },
+    {
+      title: "Flooring",
+      description: "Expert installation of laminate, vinyl, and skirting boards with perfect finish.",
+      icon: Ruler,
+      image: "/service-flooring.jpg",
+      color: "bg-sidebar-primary",
     },
     {
       title: "Electrical Works",
@@ -52,18 +60,11 @@ export default function Home() {
       color: "bg-sidebar-primary",
     },
     {
-      title: "Carpentry",
-      description: "Custom shelving, woodwork repairs, door adjustments, and bespoke solutions.",
-      icon: Hammer,
-      image: "/service-carpentry.jpg",
-      color: "bg-primary",
-    },
-    {
-      title: "Flooring",
-      description: "Expert installation of laminate, vinyl, and skirting boards with perfect finish.",
-      icon: Ruler,
-      image: "/service-flooring.jpg",
-      color: "bg-sidebar-primary",
+      title: "Painting",
+  description: "Walls, ceilings, doors and trim — smooth finish, clean lines, and careful preparation.",
+  icon: Paintbrush, // precisa importar
+  image: "/service-painting.jpg",
+  color: "bg-sidebar-primary",
     },
   ];
 
