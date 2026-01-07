@@ -91,13 +91,13 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-28 pb-16 md:pt-48 md:pb-32 px-4 border-b-4 border-foreground bg-secondary relative overflow-hidden">
+      <section className="pt-24 pb-12 md:pt-48 md:pb-32 px-4 border-b-4 border-foreground bg-secondary relative overflow-hidden">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div className="space-y-8">
             <div className="inline-block bg-foreground text-white px-4 py-2 font-bold uppercase tracking-widest text-sm transform -rotate-2">
               Available in the Netherlands
             </div>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl leading-[0.95] uppercase">
+            <h1 className="font-display text-3xl sm:text-5xl md:text-7xl leading-[0.95] uppercase">
               Fixing <br/>
               <span className="text-primary">Everything</span> <br />
               You Need.
