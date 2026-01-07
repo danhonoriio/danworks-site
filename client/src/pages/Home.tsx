@@ -28,14 +28,31 @@ export default function Home() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof contactSchema>) {
+async function onSubmit(data: z.infer<typeof contactSchema>) {
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) throw new Error("Failed");
+
     toast({
       title: "Message Sent!",
       description: "Thanks for contacting Dan Works. I'll get back to you soon.",
     });
-    console.log(data);
+
     form.reset();
+  } catch {
+    toast({
+      title: "Error",
+      description: "Could not send the message. Please contact me via WhatsApp.",
+      variant: "destructive",
+    });
   }
+}
+
 
   const services = [
     {
