@@ -193,27 +193,37 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
       </section>
 
       {/* Why Choose Me */}
-      <section className="py-16 bg-foreground text-white border-y-4 border-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-12 text-center">
-            <div className="space-y-4">
-              <div className="text-6xl font-display text-primary mb-4">100%</div>
-              <h3 className="text-2xl font-bold uppercase">Reliable</h3>
-              <p className="text-gray-300">Always on time, clear communication, and no hidden costs.</p>
-            </div>
-            <div className="space-y-4">
-              <div className="text-6xl font-display text-sidebar-primary mb-4">5+</div>
-              <h3 className="text-2xl font-bold uppercase">Years Exp.</h3>
-              <p className="text-gray-300">Skilled craftsmanship backed by years of hands-on experience.</p>
-            </div>
-            <div className="space-y-4">
-              <div className="text-6xl font-display text-primary mb-4">Top</div>
-              <h3 className="text-2xl font-bold uppercase">Quality</h3>
-              <p className="text-gray-300">Premium tools and materials for a finish that lasts.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+<section className="py-16 bg-foreground text-white border-y-4 border-foreground">
+  <div className="container mx-auto px-4">
+    <div className="grid md:grid-cols-3 gap-12 text-center">
+      
+      <div className="space-y-4">
+        <div className="text-6xl font-display text-primary mb-4">Clear</div>
+        <h3 className="text-2xl font-bold uppercase">Communication</h3>
+        <p className="text-gray-300">
+          Direct contact, clear expectations and honest updates.
+        </p>
+      </div>
+
+      <div className="space-y-4">
+        <div className="text-6xl font-display text-sidebar-primary mb-4">Clean</div>
+        <h3 className="text-2xl font-bold uppercase">Work</h3>
+        <p className="text-gray-300">
+          Careful finishes and respect for your home.
+        </p>
+      </div>
+
+      <div className="space-y-4">
+        <div className="text-6xl font-display text-primary mb-4">Fair</div>
+        <h3 className="text-2xl font-bold uppercase">Pricing</h3>
+        <p className="text-gray-300">
+          Transparent quotes with no surprises.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
             {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-secondary">
