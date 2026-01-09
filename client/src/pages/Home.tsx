@@ -40,7 +40,7 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
 
     toast({
       title: "Message Sent!",
-      description: "Thanks for contacting Dan Works. I'll get back to you soon.",
+      description: "Thanks for contacting Danilo Works. I'll get back to you soon.",
     });
 
     form.reset();
@@ -253,7 +253,7 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
 
     {/* Email */}
     <a
-      href="mailto:info@danworksnl.nl?subject=Quote%20Request%20-%20Dan%20Works"
+      href="mailto:info@daniloworks.nl?subject=Quote%20Request%20-%20Danilo%20Works"
       className="flex items-center gap-3 sm:gap-4 group"
     >
       <div className="w-12 h-12 bg-primary border-2 border-foreground flex items-center justify-center text-white shrink-0">
@@ -265,7 +265,7 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
           Email
         </div>
         <div className="font-display text-base sm:text-xl group-hover:text-primary transition-colors break-all">
-          info@danworksnl.nl
+          info@daniloworks.nl
         </div>
       </div>
     </a>
@@ -350,10 +350,10 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
   <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
     <div className="flex items-center gap-2">
       <img src="/logo-footer.png" alt="Dan Works Logo" className="h-14 w-auto" />
-      <span className="font-display text-xl tracking-tighter">DAN WORKS</span>
+      <span className="font-display text-xl tracking-tighter">DANILO WORKS</span>
     </div>
     <div className="text-sm font-medium text-gray-400">
-      © {new Date().getFullYear()} Dan Works. All rights reserved.
+      © {new Date().getFullYear()} Danilo Works. All rights reserved.
     </div>
   </div>
 </footer>
