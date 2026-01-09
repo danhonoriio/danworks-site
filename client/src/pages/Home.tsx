@@ -353,7 +353,7 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
       <span className="font-display text-xl tracking-tighter">DANILO WORKS</span>
     </div>
     <div className="text-sm font-medium text-gray-400">
-      © {new Date().getFullYear()} © Danilo Works – Klusbedrijf | KVK: 99445255 | info@daniloworks.nl
+      © {new Date().getFullYear()} Danilo Works – Klusbedrijf | KVK: 99445255 | info@daniloworks.nl
     </div>
   </div>
 </footer>
