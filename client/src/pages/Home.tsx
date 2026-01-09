@@ -28,39 +28,38 @@ export default function Home() {
     },
   });
 
-async function onSubmit(data: z.infer<typeof contactSchema>) {
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+  async function onSubmit(data: z.infer<typeof contactSchema>) {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
-    if (!res.ok) throw new Error("Failed");
+      if (!res.ok) throw new Error("Failed");
 
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for contacting Danilo Works. I'll get back to you soon.",
-    });
+      toast({
+        title: "Message Sent!",
+        description: "Thanks for contacting Danilo Works. I'll get back to you soon.",
+      });
 
-    form.reset();
-  } catch {
-    toast({
-      title: "Error",
-      description: "Could not send the message. Please contact me via WhatsApp.",
-      variant: "destructive",
-    });
+      form.reset();
+    } catch {
+      toast({
+        title: "Error",
+        description: "Could not send the message. Please contact me via WhatsApp.",
+        variant: "destructive",
+      });
+    }
   }
-}
-
 
   const services = [
     {
       title: "Carpentry & Furniture Assembly",
-  description: "IKEA/Jysk assembly, shelves, custom woodwork, door adjustments and repairs — clean, strong finish.",
-  icon: Hammer, // ou Wrench, você escolhe
-  image: "/service-carpentry-assembly.jpg",
-  color: "bg-primary",
+      description: "IKEA/Jysk assembly, shelves, custom woodwork, door adjustments and repairs — clean, strong finish.",
+      icon: Hammer,
+      image: "/service-carpentry-assembly.jpg",
+      color: "bg-primary",
     },
     {
       title: "Flooring",
@@ -78,32 +77,34 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
     },
     {
       title: "Painting",
-  description: "Walls, ceilings, doors and trim — smooth finish, clean lines, and careful preparation.",
-  icon: Paintbrush, // precisa importar
-  image: "/service-painting.jpg",
-  color: "bg-sidebar-primary",
+      description: "Walls, ceilings, doors and trim — smooth finish, clean lines, and careful preparation.",
+      icon: Paintbrush,
+      image: "/service-painting.jpg",
+      color: "bg-sidebar-primary",
     },
   ];
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground selection:bg-primary selection:text-white">
-      
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b-4 border-foreground">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Dan Works Logo" className="h-12 w-auto" />
+            <img src="/logo.png" alt="Danilo Works Logo" className="h-12 w-auto" />
           </div>
           <div className="hidden md:flex gap-8 font-bold text-sm uppercase tracking-widest">
-            <a href="#services" className="hover:text-primary transition-colors">Services</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            <a href="#services" className="hover:text-primary transition-colors">
+              Services
+            </a>
+            <a href="#contact" className="hover:text-primary transition-colors">
+              Contact
+            </a>
           </div>
           <a href="#contact">
-  <Button className="rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase">
-    Get a Quote
-  </Button>
-</a>
-
+            <Button className="rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase">
+              Get a Quote
+            </Button>
+          </a>
         </div>
       </nav>
 
@@ -115,28 +116,25 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
               Available in the Netherlands
             </div>
             <h1 className="font-display text-3xl sm:text-5xl md:text-7xl leading-[0.95] uppercase">
-              Fixing <br/>
+              Fixing <br />
               <span className="text-primary">Everything</span> <br />
               You Need.
             </h1>
-            <p className="text-base sm:text-lg md:text-xl font-medium max-w-md leading-relaxed text-muted-foreground">
-              Professional handyman services for your home and office. Reliable, skilled, and ready to work.
-            </p>
-<a href="#services">
-  <Button
-    variant="outline"
-    size="lg"
-    className="h-14 px-8 text-lg rounded-none border-2 border-foreground shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all bg-white text-foreground font-bold uppercase"
-  >
-    View Services
-  </Button>
-</a>
+            <a href="#services">
+              <Button
+                variant="outline"
+                size="lg"
+                className="h-14 px-8 text-lg rounded-none border-2 border-foreground shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all bg-white text-foreground font-bold uppercase"
+              >
+                View Services
+              </Button>
+            </a>
           </div>
           <div className="relative">
             <div className="aspect-[4/3] border-4 border-foreground shadow-[12px_12px_0px_0px_var(--primary)] bg-white relative z-10 overflow-hidden group">
-              <img 
-                src="/hero-renovation.jpg" 
-                alt="Renovation work" 
+              <img
+                src="/hero-renovation.jpg"
+                alt="Renovation work"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply pointer-events-none"></div>
@@ -158,19 +156,22 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
               <h2 className="font-display text-4xl md:text-5xl uppercase mb-4">What I Do</h2>
               <div className="h-2 w-32 bg-primary"></div>
             </div>
-            <p className="text-xl max-w-md font-medium text-right md:text-left">
-              Comprehensive solutions for your home maintenance needs.
-            </p>
+            <p className="text-xl max-w-md font-medium text-right md:text-left text-muted-foreground">
+  Practical handyman services for everyday home projects.
+</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="group border-4 border-foreground bg-white hover:shadow-[8px_8px_0px_0px_var(--primary)] transition-all duration-300">
+              <div
+                key={index}
+                className="group border-4 border-foreground bg-white hover:shadow-[8px_8px_0px_0px_var(--primary)] transition-all duration-300"
+              >
                 <div className="grid md:grid-cols-2 h-full">
                   <div className="relative h-64 md:h-auto overflow-hidden border-b-4 md:border-b-0 md:border-r-4 border-foreground">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
+                    <img
+                      src={service.image}
+                      alt={service.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
                     />
                     <div className={`absolute top-0 left-0 p-4 ${service.color} border-b-4 border-r-4 border-foreground`}>
@@ -180,9 +181,7 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
                   <div className="p-8 flex flex-col justify-between">
                     <div>
                       <h3 className="font-display text-2xl uppercase mb-4">{service.title}</h3>
-                      <p className="text-muted-foreground font-medium leading-relaxed mb-6">
-                        {service.description}
-                      </p>
+                      <p className="text-muted-foreground font-medium leading-relaxed mb-6">{service.description}</p>
                     </div>
                   </div>
                 </div>
@@ -192,96 +191,93 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
         </div>
       </section>
 
-      {/* Why Choose Me */}
-<section className="py-16 bg-foreground text-white border-y-4 border-foreground">
-  <div className="container mx-auto px-4">
-    <div className="grid md:grid-cols-3 gap-12 text-center">
-      
-      <div className="space-y-4">
-        <div className="text-4xl font-display text-primary mb-4">Clear</div>
-        <h3 className="text-2xl font-bold uppercase">Communication</h3>
-        <p className="text-gray-300">
-          Direct contact, clear expectations and honest updates.
-        </p>
-      </div>
+      {/* Why Choose Me (Minimal / Option B) */}
+      <section className="py-12 bg-foreground text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-10 text-center">
+            <div className="space-y-3">
+              <div className="text-2xl font-display text-primary">Clear</div>
+              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">Communication</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Direct contact, clear expectations and honest updates.
+              </p>
+            </div>
 
-      <div className="space-y-4">
-        <div className="text-4xl font-display text-sidebar-primary mb-4">Clean</div>
-        <h3 className="text-2xl font-bold uppercase">Work</h3>
-        <p className="text-gray-300">
-          Careful finishes and respect for your home.
-        </p>
-      </div>
+            <div className="space-y-3">
+              <div className="text-2xl font-display text-primary">Clean</div>
+              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">Work</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Careful finishes and respect for your home.
+              </p>
+            </div>
 
-      <div className="space-y-4">
-        <div className="text-4xl font-display text-primary mb-4">Fair</div>
-        <h3 className="text-2xl font-bold uppercase">Pricing</h3>
-        <p className="text-gray-300">
-          Transparent quotes with no surprises.
-        </p>
-      </div>
+            <div className="space-y-3">
+              <div className="text-2xl font-display text-primary">Fair</div>
+              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">Pricing</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Transparent quotes with no surprises.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    </div>
-  </div>
-</section>
-
-            {/* Contact Section */}
+      {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-secondary">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-white border-4 border-foreground shadow-[12px_12px_0px_0px_var(--sidebar-primary)] p-8 md:p-16">
             <div className="grid md:grid-cols-2 gap-16">
               <div>
-  <h2 className="font-display text-4xl sm:text-5xl uppercase mb-6">
-    Let's Work <br /> Together
-  </h2>
+                <h2 className="font-display text-4xl sm:text-5xl uppercase mb-6">
+                  Let's Work <br /> Together
+                </h2>
 
-  <p className="text-base sm:text-lg font-medium mb-8 text-muted-foreground">
-    Ready to start your project? Fill out the form or contact me directly via WhatsApp.
-  </p>
+                <p className="text-base sm:text-lg font-medium mb-8 text-muted-foreground">
+                  Ready to start your project? Fill out the form or contact me directly via WhatsApp.
+                </p>
 
-  <div className="space-y-6">
-    {/* WhatsApp */}
-    <a
-      href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center gap-3 sm:gap-4 group"
-    >
-      <div className="w-12 h-12 bg-[#25D366] border-2 border-foreground flex items-center justify-center text-white shrink-0">
-        <SiWhatsapp className="w-6 h-6" />
-      </div>
+                <div className="space-y-6">
+                  {/* WhatsApp */}
+                  <a
+                    href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-3 sm:gap-4 group"
+                  >
+                    <div className="w-12 h-12 bg-[#25D366] border-2 border-foreground flex items-center justify-center text-white shrink-0">
+                      <SiWhatsapp className="w-6 h-6" />
+                    </div>
 
-      <div className="min-w-0 flex-1">
-        <div className="font-bold uppercase text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-          Contact Me
-        </div>
-        <div className="font-display text-base sm:text-xl group-hover:text-primary transition-colors break-words">
-          +31 6 85 36 45 44
-        </div>
-      </div>
-    </a>
+                    <div className="min-w-0 flex-1">
+                      <div className="font-bold uppercase text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                        Contact Me
+                      </div>
+                      <div className="font-display text-base sm:text-xl group-hover:text-primary transition-colors break-words">
+                        +31 6 85 36 45 44
+                      </div>
+                    </div>
+                  </a>
 
-    {/* Email */}
-    <a
-      href="mailto:info@daniloworks.nl?subject=Quote%20Request%20-%20Danilo%20Works"
-      className="flex items-center gap-3 sm:gap-4 group"
-    >
-      <div className="w-12 h-12 bg-primary border-2 border-foreground flex items-center justify-center text-white shrink-0">
-        <Mail className="w-6 h-6" />
-      </div>
+                  {/* Email */}
+                  <a
+                    href="mailto:info@daniloworks.nl?subject=Quote%20Request%20-%20Danilo%20Works"
+                    className="flex items-center gap-3 sm:gap-4 group"
+                  >
+                    <div className="w-12 h-12 bg-primary border-2 border-foreground flex items-center justify-center text-white shrink-0">
+                      <Mail className="w-6 h-6" />
+                    </div>
 
-      <div className="min-w-0 flex-1">
-        <div className="font-bold uppercase text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-          Email
-        </div>
-        <div className="font-display text-base sm:text-xl group-hover:text-primary transition-colors break-all">
-          info@daniloworks.nl
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
-
+                    <div className="min-w-0 flex-1">
+                      <div className="font-bold uppercase text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                        Email
+                      </div>
+                      <div className="font-display text-base sm:text-xl group-hover:text-primary transition-colors break-all">
+                        info@daniloworks.nl
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
 
               <div className="bg-background p-8 border-2 border-foreground">
                 <Form {...form}>
@@ -354,19 +350,18 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
         </div>
       </section>
 
-
       {/* Footer */}
       <footer className="bg-foreground text-white py-12 border-t-4 border-primary">
-  <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-    <div className="flex items-center gap-2">
-      <img src="/logo-footer.png" alt="Dan Works Logo" className="h-14 w-auto" />
-      <span className="font-display text-xl tracking-tighter">DANILO WORKS</span>
-    </div>
-    <div className="text-sm font-medium text-gray-400">
-      © {new Date().getFullYear()} Danilo Works – Klusbedrijf | KVK: 99445255 | info@daniloworks.nl
-    </div>
-  </div>
-</footer>
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-2">
+            <img src="/logo-footer.png" alt="Danilo Works Logo" className="h-14 w-auto" />
+            <span className="font-display text-xl tracking-tighter">Danilo Works</span>
+          </div>
+          <div className="text-sm font-medium text-white/60">
+            © {new Date().getFullYear()} Danilo Works – Klusbedrijf | KVK: 99445255 | info@daniloworks.nl
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
