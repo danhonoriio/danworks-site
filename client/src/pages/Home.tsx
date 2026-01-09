@@ -198,7 +198,7 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
     <div className="grid md:grid-cols-3 gap-12 text-center">
       
       <div className="space-y-4">
-        <div className="text-6xl font-display text-primary mb-4">Clear</div>
+        <div className="text-4xl font-display text-primary mb-4">Clear</div>
         <h3 className="text-2xl font-bold uppercase">Communication</h3>
         <p className="text-gray-300">
           Direct contact, clear expectations and honest updates.
@@ -206,7 +206,7 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
       </div>
 
       <div className="space-y-4">
-        <div className="text-6xl font-display text-sidebar-primary mb-4">Clean</div>
+        <div className="text-4xl font-display text-sidebar-primary mb-4">Clean</div>
         <h3 className="text-2xl font-bold uppercase">Work</h3>
         <p className="text-gray-300">
           Careful finishes and respect for your home.
@@ -214,7 +214,7 @@ async function onSubmit(data: z.infer<typeof contactSchema>) {
       </div>
 
       <div className="space-y-4">
-        <div className="text-6xl font-display text-primary mb-4">Fair</div>
+        <div className="text-4xl font-display text-primary mb-4">Fair</div>
         <h3 className="text-2xl font-bold uppercase">Pricing</h3>
         <p className="text-gray-300">
           Transparent quotes with no surprises.
