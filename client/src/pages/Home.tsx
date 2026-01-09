@@ -172,7 +172,7 @@ export default function Home() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0"
                     />
                     <div className={`absolute top-0 left-0 p-4 ${service.color} border-b-4 border-r-4 border-foreground`}>
                       <service.icon className="w-8 h-8 text-white" />
