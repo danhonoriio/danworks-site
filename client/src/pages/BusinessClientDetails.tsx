@@ -30,11 +30,6 @@ export default function BusinessClientDetails() {
   return (
     <main className="min-h-screen bg-white px-6 py-12">
       <div className="mx-auto max-w-4xl">
-        <h1 className="mb-4 text-3xl font-bold">Business client billing details</h1>
-        <p className="mb-8 text-gray-600">
-          Please fill in your billing details so I can prepare the invoice correctly.
-        </p>
-
         <iframe
           data-tally-src="https://tally.so/embed/b5rEd1?alignLeft=1&transparentBackground=1&dynamicHeight=1"
           loading="lazy"
