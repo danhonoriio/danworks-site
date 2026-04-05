@@ -53,7 +53,7 @@ export default function BusinessClientDetails() {
 
         <div className="rounded-2xl bg-white p-4 shadow-sm">
           <iframe
-            data-tally-src="https://tally.so/embed/b5rEd1?alignLeft=1&transparentBackground=1&dynamicHeight=1"
+            data-tally-src="https://tally.so/embed/b5rEd1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
             loading="lazy"
             width="100%"
             height="1009"
