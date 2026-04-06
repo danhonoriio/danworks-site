@@ -227,8 +227,8 @@ export default function Home() {
           </div>
 
           <div className="text-center text-sm text-white/40 md:text-right">
-            © {new Date().getFullYear()} Danilo Works · KVK: 99445255 · info@daniloworks.nl
-          </div>
+  © {new Date().getFullYear()} Danilo Works · KVK: 99445255 · VAT ID: NL005386977B14 · info@daniloworks.nl
+</div>
         </div>
       </footer>
     </div>
