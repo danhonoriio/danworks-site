@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { SiWhatsapp } from "react-icons/si";
-import { ArrowRight, Mail, Hammer, Ruler, Zap, Paintbrush } from "lucide-react";
+import { SiWhatsapp, SiInstagram } from "react-icons/si";
+import { Mail, Hammer, Ruler, Zap, Paintbrush } from "lucide-react";
 
 export default function Home() {
   const services = [
@@ -30,36 +30,18 @@ export default function Home() {
     },
   ];
 
-  const highlights = [
-    {
-      title: "Clear Communication",
-      description: "Direct contact, honest updates and simple quoting.",
-    },
-    {
-      title: "Clean Work",
-      description: "Careful finishes and respect for your home and space.",
-    },
-    {
-      title: "Reliable Service",
-      description: "Practical solutions, fair pricing and attention to detail.",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-[#0b0b0b] text-[#f5f5f0] selection:bg-white selection:text-black">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0b0b0b]/90 backdrop-blur">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
           <div className="flex items-center">
-            <img src="/logo.png" alt="Danilo Works Logo" className="h-11 w-auto" />
+            <img src="/logo-footer.png" alt="Danilo Works Logo" className="h-12 w-auto" />
           </div>
 
           <div className="hidden gap-8 text-sm font-medium text-white/70 md:flex">
             <a href="#services" className="transition-colors hover:text-white">
               Services
-            </a>
-            <a href="#about" className="transition-colors hover:text-white">
-              Why Danilo Works
             </a>
             <a href="#contact" className="transition-colors hover:text-white">
               Contact
@@ -80,14 +62,14 @@ export default function Home() {
 
       {/* Hero */}
       <section className="border-b border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-16 px-4 py-20 md:grid-cols-[1.2fr_0.8fr] md:py-28">
+        <div className="mx-auto max-w-7xl px-4 py-20 md:py-28">
           <div className="max-w-4xl">
             <p className="mb-6 text-xs font-semibold uppercase tracking-[0.28em] text-[#c7a56a]">
               Danilo Works · Handyman Services in the Netherlands
             </p>
 
-            <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight sm:text-6xl md:text-7xl">
-              Clean, reliable work for homes that need quality finishing.
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight sm:text-6xl md:text-7xl">
+              Clean, reliable work with a premium finish.
             </h1>
 
             <p className="mt-8 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
@@ -115,37 +97,9 @@ export default function Home() {
                   variant="outline"
                   className="h-12 rounded-full border border-white/20 bg-transparent px-7 text-sm font-semibold text-white hover:bg-white/5"
                 >
-                  Contact on WhatsApp
+                  WhatsApp
                 </Button>
               </a>
-            </div>
-          </div>
-
-          <div className="flex items-end">
-            <div className="w-full rounded-3xl border border-white/10 bg-[#111111] p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/40">
-                Main services
-              </p>
-
-              <div className="mt-8 space-y-6">
-                {services.map((service, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-4 border-b border-white/10 pb-6 last:border-b-0 last:pb-0"
-                  >
-                    <div className="mt-1 rounded-full border border-white/10 bg-white/5 p-3">
-                      <service.icon className="h-5 w-5 text-[#c7a56a]" />
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg font-medium text-white">{service.title}</h3>
-                      <p className="mt-2 text-sm leading-7 text-white/60">
-                        {service.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
@@ -153,8 +107,8 @@ export default function Home() {
 
       {/* Services */}
       <section id="services" className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-4 py-20 md:py-24">
-          <div className="mb-14 max-w-2xl">
+        <div className="mx-auto max-w-7xl px-4 py-16 md:py-20">
+          <div className="mb-12 max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c7a56a]">
               Services
             </p>
@@ -162,7 +116,7 @@ export default function Home() {
               Practical work, finished properly.
             </h2>
             <p className="mt-5 text-base leading-8 text-white/65">
-              A focused selection of handyman services for everyday residential projects.
+              A focused selection of handyman services for residential projects.
             </p>
           </div>
 
@@ -186,38 +140,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why choose me */}
-      <section id="about" className="border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-4 py-20 md:py-24">
-          <div className="mb-14 max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c7a56a]">
-              Why Danilo Works
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">
-              Simple, reliable and detail-focused.
-            </h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {highlights.map((item, index) => (
-              <div
-                key={index}
-                className="rounded-3xl border border-white/10 bg-[#111111] p-8"
-              >
-                <h3 className="text-xl font-medium">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-white/60">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact */}
+      {/* Contact / Portfolio */}
       <section id="contact">
-        <div className="mx-auto max-w-7xl px-4 py-20 md:py-24">
-          <div className="grid gap-8 md:grid-cols-[1fr_1fr]">
+        <div className="mx-auto max-w-7xl px-4 py-16 md:py-20">
+          <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-3xl border border-white/10 bg-[#111111] p-8 md:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c7a56a]">
                 Contact
@@ -226,7 +152,7 @@ export default function Home() {
                 Ready to start your project?
               </h2>
               <p className="mt-6 max-w-xl text-base leading-8 text-white/65">
-                Open the quote form with your project details and photos, or contact me directly by WhatsApp or email.
+                Send your project details through the quote form, or contact me directly via WhatsApp or email.
               </p>
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -236,7 +162,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <Button className="h-12 rounded-full border border-white/15 bg-white px-7 text-sm font-semibold text-black hover:bg-[#eaeaea]">
-                    Open Quote Form
+                    Request a Quote
                   </Button>
                 </a>
 
@@ -256,23 +182,33 @@ export default function Home() {
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-[#111111] p-8 md:p-10">
-              <div className="space-y-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c7a56a]">
+                Portfolio
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">
+                See recent work.
+              </h2>
+              <p className="mt-6 max-w-xl text-base leading-8 text-white/65">
+                I’ll be posting more project photos and updates on Instagram so you can see real examples of my work.
+              </p>
+
+              <div className="mt-10 space-y-6">
                 <a
-                  href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
+                  href="https://instagram.com/daniloworks.nl"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="group flex items-start gap-4"
                 >
                   <div className="rounded-full border border-white/10 bg-white/5 p-3">
-                    <SiWhatsapp className="h-5 w-5 text-[#25D366]" />
+                    <SiInstagram className="h-5 w-5 text-[#c7a56a]" />
                   </div>
 
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
-                      WhatsApp
+                      Instagram
                     </div>
                     <div className="mt-2 text-lg font-medium text-white transition-colors group-hover:text-[#c7a56a]">
-                      +31 6 85 36 45 44
+                      View my work
                     </div>
                   </div>
                 </a>
@@ -294,18 +230,6 @@ export default function Home() {
                     </div>
                   </div>
                 </a>
-
-                <div className="border-t border-white/10 pt-8">
-                  <a
-                    href="https://tally.so/r/A7Dexe"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-white/70 transition-colors hover:text-white"
-                  >
-                    Open the quote form
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
-                </div>
               </div>
             </div>
           </div>
