@@ -77,17 +77,7 @@ export default function Home() {
               solutions, careful execution and clear communication from start to finish.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="https://tally.so/r/A7Dexe"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="h-12 rounded-full border border-white/15 bg-white px-7 text-sm font-semibold text-black hover:bg-[#eaeaea]">
-                  Request a Quote
-                </Button>
-              </a>
-
+            <div className="mt-10">
               <a
                 href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
                 target="_blank"
@@ -152,20 +142,10 @@ export default function Home() {
                 Ready to start your project?
               </h2>
               <p className="mt-6 max-w-xl text-base leading-8 text-white/65">
-                Send your project details through the quote form, or contact me directly via WhatsApp or email.
+                Send your project details through the quote form from the top menu, or contact me directly via WhatsApp or email.
               </p>
 
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="https://tally.so/r/A7Dexe"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="h-12 rounded-full border border-white/15 bg-white px-7 text-sm font-semibold text-black hover:bg-[#eaeaea]">
-                    Request a Quote
-                  </Button>
-                </a>
-
+              <div className="mt-10">
                 <a
                   href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
                   target="_blank"
