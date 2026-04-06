@@ -1,58 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useToast } from "@/hooks/use-toast";
 import { SiWhatsapp } from "react-icons/si";
-import { Wrench, Zap, Hammer, Ruler, ArrowRight, CheckCircle2, Mail } from "lucide-react";
+import { Zap, Hammer, Ruler, CheckCircle2, Mail } from "lucide-react";
 import { Paintbrush } from "lucide-react";
 
-const contactSchema = z.object({
-  name: z.string().min(2, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-});
-
 export default function Home() {
-  const { toast } = useToast();
-  const form = useForm<z.infer<typeof contactSchema>>({
-    resolver: zodResolver(contactSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-  });
-
-  async function onSubmit(data: z.infer<typeof contactSchema>) {
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (!res.ok) throw new Error("Failed");
-
-      toast({
-        title: "Message Sent!",
-        description: "Thanks for contacting Danilo Works. I'll get back to you soon.",
-      });
-
-      form.reset();
-    } catch {
-      toast({
-        title: "Error",
-        description: "Could not send the message. Please contact me via WhatsApp.",
-        variant: "destructive",
-      });
-    }
-  }
-
   const services = [
     {
       title: "Carpentry & Furniture Assembly",
@@ -92,6 +43,7 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="Danilo Works Logo" className="h-12 w-auto" />
           </div>
+
           <div className="hidden md:flex gap-8 font-bold text-sm uppercase tracking-widest">
             <a href="#services" className="hover:text-primary transition-colors">
               Services
@@ -100,9 +52,14 @@ export default function Home() {
               Contact
             </a>
           </div>
-          <a href="#contact">
+
+          <a
+            href="https://tally.so/r/A7Dexe"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button className="rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase">
-              Get a Quote
+              Get Your Quote
             </Button>
           </a>
         </div>
@@ -115,11 +72,13 @@ export default function Home() {
             <div className="inline-block bg-foreground text-white px-4 py-2 font-bold uppercase tracking-widest text-sm transform -rotate-2">
               Available in the Netherlands
             </div>
+
             <h1 className="font-display text-3xl sm:text-5xl md:text-7xl leading-[0.95] uppercase">
               Fixing <br />
               <span className="text-primary">Everything</span> <br />
               You Need.
             </h1>
+
             <a href="#services">
               <Button
                 variant="outline"
@@ -130,6 +89,7 @@ export default function Home() {
               </Button>
             </a>
           </div>
+
           <div className="relative">
             <div className="aspect-[4/3] border-4 border-foreground shadow-[12px_12px_0px_0px_var(--primary)] bg-white relative z-10 overflow-hidden group">
               <img
@@ -139,7 +99,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply pointer-events-none"></div>
             </div>
-            {/* Decorative elements */}
+
             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-sidebar-primary border-4 border-foreground z-0"></div>
             <div className="absolute -top-8 -left-8 w-24 h-24 bg-primary border-4 border-foreground z-20 rounded-full flex items-center justify-center">
               <CheckCircle2 className="w-12 h-12 text-white" />
@@ -156,9 +116,10 @@ export default function Home() {
               <h2 className="font-display text-4xl md:text-5xl uppercase mb-4">What I Do</h2>
               <div className="h-2 w-32 bg-primary"></div>
             </div>
+
             <p className="text-xl max-w-md font-medium text-right md:text-left text-muted-foreground">
-  Practical handyman services for everyday home projects.
-</p>
+              Practical handyman services for everyday home projects.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -178,10 +139,13 @@ export default function Home() {
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
+
                   <div className="p-8 flex flex-col justify-between">
                     <div>
                       <h3 className="font-display text-2xl uppercase mb-4">{service.title}</h3>
-                      <p className="text-muted-foreground font-medium leading-relaxed mb-6">{service.description}</p>
+                      <p className="text-muted-foreground font-medium leading-relaxed mb-6">
+                        {service.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -191,13 +155,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Me (Minimal / Option B) */}
+      {/* Why Choose Me */}
       <section className="py-12 bg-foreground text-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-10 text-center">
             <div className="space-y-3">
               <div className="text-2xl font-display text-primary">Clear</div>
-              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">Communication</h3>
+              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">
+                Communication
+              </h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 Direct contact, clear expectations and honest updates.
               </p>
@@ -205,7 +171,9 @@ export default function Home() {
 
             <div className="space-y-3">
               <div className="text-2xl font-display text-primary">Clean</div>
-              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">Work</h3>
+              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">
+                Work
+              </h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 Careful finishes and respect for your home.
               </p>
@@ -213,7 +181,9 @@ export default function Home() {
 
             <div className="space-y-3">
               <div className="text-2xl font-display text-primary">Fair</div>
-              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">Pricing</h3>
+              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">
+                Pricing
+              </h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 Transparent quotes with no surprises.
               </p>
@@ -233,11 +203,10 @@ export default function Home() {
                 </h2>
 
                 <p className="text-base sm:text-lg font-medium mb-8 text-muted-foreground">
-                  Ready to start your project? Fill out the form or contact me directly via WhatsApp.
+                  Ready to start your project? Open the quote form or contact me directly via WhatsApp.
                 </p>
 
                 <div className="space-y-6">
-                  {/* WhatsApp */}
                   <a
                     href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
                     target="_blank"
@@ -258,7 +227,6 @@ export default function Home() {
                     </div>
                   </a>
 
-                  {/* Email */}
                   <a
                     href="mailto:info@daniloworks.nl?subject=Quote%20Request%20-%20Danilo%20Works"
                     className="flex items-center gap-3 sm:gap-4 group"
@@ -279,71 +247,30 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-background p-8 border-2 border-foreground">
-                <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="font-bold uppercase">Name</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="Your Name"
-                              {...field}
-                              className="rounded-none border-2 border-foreground h-12 bg-white focus-visible:ring-0 focus-visible:border-primary"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+              <div className="bg-background p-8 border-2 border-foreground flex flex-col justify-center">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-display text-2xl uppercase mb-3">Request a Quote</h3>
+                    <p className="text-muted-foreground font-medium leading-relaxed">
+                      Fill in the quote form with your project details and photos, and I’ll get back to you as soon as possible.
+                    </p>
+                  </div>
 
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="font-bold uppercase">Email</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="your@email.com"
-                              {...field}
-                              className="rounded-none border-2 border-foreground h-12 bg-white focus-visible:ring-0 focus-visible:border-primary"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="font-bold uppercase">Message</FormLabel>
-                          <FormControl>
-                            <Textarea
-                              placeholder="Tell me about your project..."
-                              {...field}
-                              className="rounded-none border-2 border-foreground min-h-[120px] bg-white focus-visible:ring-0 focus-visible:border-primary resize-none"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <Button
-                      type="submit"
-                      className="w-full h-12 rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase text-lg"
-                    >
-                      Send Message
+                  <a
+                    href="https://tally.so/r/A7Dexe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button className="w-full h-12 rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase text-lg">
+                      Open Quote Form
                     </Button>
-                  </form>
-                </Form>
+                  </a>
+
+                  <p className="text-sm text-muted-foreground">
+                    Prefer WhatsApp? You can also send me a message directly using the contact option on the left.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
