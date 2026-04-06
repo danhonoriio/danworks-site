@@ -1,54 +1,67 @@
 import { Button } from "@/components/ui/button";
 import { SiWhatsapp } from "react-icons/si";
-import { Zap, Hammer, Ruler, CheckCircle2, Mail } from "lucide-react";
-import { Paintbrush } from "lucide-react";
+import { ArrowRight, Mail, Hammer, Ruler, Zap, Paintbrush } from "lucide-react";
 
 export default function Home() {
   const services = [
     {
       title: "Carpentry & Furniture Assembly",
-      description: "IKEA/Jysk assembly, shelves, custom woodwork, door adjustments and repairs — clean, strong finish.",
+      description:
+        "Furniture assembly, shelves, custom woodwork, door adjustments and practical finishing details.",
       icon: Hammer,
-      image: "/service-carpentry-assembly.jpg",
-      color: "bg-primary",
     },
     {
       title: "Flooring",
-      description: "Expert installation of laminate, vinyl, and skirting boards with perfect finish.",
+      description:
+        "Laminate, vinyl and skirting board installation with clean alignment and careful finishing.",
       icon: Ruler,
-      image: "/service-flooring.jpg",
-      color: "bg-sidebar-primary",
     },
     {
       title: "Electrical Works",
-      description: "Safe installation of lights, sockets, switches, and minor electrical repairs.",
+      description:
+        "Lights, sockets, switches and minor electrical work done safely and neatly.",
       icon: Zap,
-      image: "/service-electrical.jpg",
-      color: "bg-sidebar-primary",
     },
     {
       title: "Painting",
-      description: "Walls, ceilings, doors and trim — smooth finish, clean lines, and careful preparation.",
+      description:
+        "Walls, ceilings, doors and trim with smooth preparation and clean lines.",
       icon: Paintbrush,
-      image: "/service-painting.jpg",
-      color: "bg-sidebar-primary",
+    },
+  ];
+
+  const highlights = [
+    {
+      title: "Clear Communication",
+      description: "Direct contact, honest updates and simple quoting.",
+    },
+    {
+      title: "Clean Work",
+      description: "Careful finishes and respect for your home and space.",
+    },
+    {
+      title: "Reliable Service",
+      description: "Practical solutions, fair pricing and attention to detail.",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-background font-sans text-foreground selection:bg-primary selection:text-white">
+    <div className="min-h-screen bg-[#0b0b0b] text-[#f5f5f0] selection:bg-white selection:text-black">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b-4 border-foreground">
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Danilo Works Logo" className="h-12 w-auto" />
+      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0b0b0b]/90 backdrop-blur">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
+          <div className="flex items-center">
+            <img src="/logo.png" alt="Danilo Works Logo" className="h-11 w-auto" />
           </div>
 
-          <div className="hidden md:flex gap-8 font-bold text-sm uppercase tracking-widest">
-            <a href="#services" className="hover:text-primary transition-colors">
+          <div className="hidden gap-8 text-sm font-medium text-white/70 md:flex">
+            <a href="#services" className="transition-colors hover:text-white">
               Services
             </a>
-            <a href="#contact" className="hover:text-primary transition-colors">
+            <a href="#about" className="transition-colors hover:text-white">
+              Why Danilo Works
+            </a>
+            <a href="#contact" className="transition-colors hover:text-white">
               Contact
             </a>
           </div>
@@ -58,218 +71,240 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase">
-              Get Your Quote
+            <Button className="h-11 rounded-full border border-white/15 bg-white px-6 text-sm font-semibold text-black hover:bg-[#eaeaea]">
+              Request a Quote
             </Button>
           </a>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-12 md:pt-48 md:pb-32 px-4 border-b-4 border-foreground bg-secondary relative overflow-hidden">
-        <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div className="space-y-8">
-            <div className="inline-block bg-foreground text-white px-4 py-2 font-bold uppercase tracking-widest text-sm transform -rotate-2">
-              Available in the Netherlands
-            </div>
+      {/* Hero */}
+      <section className="border-b border-white/10">
+        <div className="mx-auto grid max-w-7xl gap-16 px-4 py-20 md:grid-cols-[1.2fr_0.8fr] md:py-28">
+          <div className="max-w-4xl">
+            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.28em] text-[#c7a56a]">
+              Danilo Works · Handyman Services in the Netherlands
+            </p>
 
-            <h1 className="font-display text-3xl sm:text-5xl md:text-7xl leading-[0.95] uppercase">
-              Fixing <br />
-              <span className="text-primary">Everything</span> <br />
-              You Need.
+            <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight sm:text-6xl md:text-7xl">
+              Clean, reliable work for homes that need quality finishing.
             </h1>
 
-            <a href="#services">
-              <Button
-                variant="outline"
-                size="lg"
-                className="h-14 px-8 text-lg rounded-none border-2 border-foreground shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all bg-white text-foreground font-bold uppercase"
+            <p className="mt-8 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
+              Flooring, carpentry, electrical works and painting with practical
+              solutions, careful execution and clear communication from start to finish.
+            </p>
+
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="https://tally.so/r/A7Dexe"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                View Services
-              </Button>
-            </a>
+                <Button className="h-12 rounded-full border border-white/15 bg-white px-7 text-sm font-semibold text-black hover:bg-[#eaeaea]">
+                  Request a Quote
+                </Button>
+              </a>
+
+              <a
+                href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button
+                  variant="outline"
+                  className="h-12 rounded-full border border-white/20 bg-transparent px-7 text-sm font-semibold text-white hover:bg-white/5"
+                >
+                  Contact on WhatsApp
+                </Button>
+              </a>
+            </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-[4/3] border-4 border-foreground shadow-[12px_12px_0px_0px_var(--primary)] bg-white relative z-10 overflow-hidden group">
-              <img
-                src="/hero-renovation.jpg"
-                alt="Renovation work"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-primary/10 mix-blend-multiply pointer-events-none"></div>
-            </div>
+          <div className="flex items-end">
+            <div className="w-full rounded-3xl border border-white/10 bg-[#111111] p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/40">
+                Main services
+              </p>
 
-            <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-sidebar-primary border-4 border-foreground z-0"></div>
-            <div className="absolute -top-8 -left-8 w-24 h-24 bg-primary border-4 border-foreground z-20 rounded-full flex items-center justify-center">
-              <CheckCircle2 className="w-12 h-12 text-white" />
+              <div className="mt-8 space-y-6">
+                {services.map((service, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-4 border-b border-white/10 pb-6 last:border-b-0 last:pb-0"
+                  >
+                    <div className="mt-1 rounded-full border border-white/10 bg-white/5 p-3">
+                      <service.icon className="h-5 w-5 text-[#c7a56a]" />
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-medium text-white">{service.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-white/60">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-16 px-4 bg-background">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div>
-              <h2 className="font-display text-4xl md:text-5xl uppercase mb-4">What I Do</h2>
-              <div className="h-2 w-32 bg-primary"></div>
-            </div>
-
-            <p className="text-xl max-w-md font-medium text-right md:text-left text-muted-foreground">
-              Practical handyman services for everyday home projects.
+      {/* Services */}
+      <section id="services" className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-4 py-20 md:py-24">
+          <div className="mb-14 max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c7a56a]">
+              Services
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">
+              Practical work, finished properly.
+            </h2>
+            <p className="mt-5 text-base leading-8 text-white/65">
+              A focused selection of handyman services for everyday residential projects.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-6 md:grid-cols-2">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group border-4 border-foreground bg-white hover:shadow-[8px_8px_0px_0px_var(--primary)] transition-all duration-300"
+                className="rounded-3xl border border-white/10 bg-[#111111] p-8 transition-colors hover:border-white/20"
               >
-                <div className="grid md:grid-cols-2 h-full">
-                  <div className="relative h-64 md:h-auto overflow-hidden border-b-4 md:border-b-0 md:border-r-4 border-foreground">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 md:grayscale md:group-hover:grayscale-0"
-                    />
-                    <div className={`absolute top-0 left-0 p-4 ${service.color} border-b-4 border-r-4 border-foreground`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
-
-                  <div className="p-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="font-display text-2xl uppercase mb-4">{service.title}</h3>
-                      <p className="text-muted-foreground font-medium leading-relaxed mb-6">
-                        {service.description}
-                      </p>
-                    </div>
-                  </div>
+                <div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/5 p-3">
+                  <service.icon className="h-5 w-5 text-[#c7a56a]" />
                 </div>
+
+                <h3 className="text-2xl font-medium tracking-tight">{service.title}</h3>
+                <p className="mt-4 max-w-xl text-sm leading-7 text-white/60">
+                  {service.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Me */}
-      <section className="py-12 bg-foreground text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-10 text-center">
-            <div className="space-y-3">
-              <div className="text-2xl font-display text-primary">Clear</div>
-              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">
-                Communication
-              </h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                Direct contact, clear expectations and honest updates.
-              </p>
-            </div>
+      {/* Why choose me */}
+      <section id="about" className="border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-4 py-20 md:py-24">
+          <div className="mb-14 max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c7a56a]">
+              Why Danilo Works
+            </p>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">
+              Simple, reliable and detail-focused.
+            </h2>
+          </div>
 
-            <div className="space-y-3">
-              <div className="text-2xl font-display text-primary">Clean</div>
-              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">
-                Work
-              </h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                Careful finishes and respect for your home.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <div className="text-2xl font-display text-primary">Fair</div>
-              <h3 className="text-base font-semibold uppercase tracking-widest text-white/90">
-                Pricing
-              </h3>
-              <p className="text-white/70 text-sm leading-relaxed">
-                Transparent quotes with no surprises.
-              </p>
-            </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {highlights.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-white/10 bg-[#111111] p-8"
+              >
+                <h3 className="text-xl font-medium">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-white/60">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 bg-secondary">
-        <div className="container mx-auto max-w-5xl">
-          <div className="bg-white border-4 border-foreground shadow-[12px_12px_0px_0px_var(--sidebar-primary)] p-8 md:p-16">
-            <div className="grid md:grid-cols-2 gap-16">
-              <div>
-                <h2 className="font-display text-4xl sm:text-5xl uppercase mb-6">
-                  Let's Work <br /> Together
-                </h2>
+      {/* Contact */}
+      <section id="contact">
+        <div className="mx-auto max-w-7xl px-4 py-20 md:py-24">
+          <div className="grid gap-8 md:grid-cols-[1fr_1fr]">
+            <div className="rounded-3xl border border-white/10 bg-[#111111] p-8 md:p-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#c7a56a]">
+                Contact
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">
+                Ready to start your project?
+              </h2>
+              <p className="mt-6 max-w-xl text-base leading-8 text-white/65">
+                Open the quote form with your project details and photos, or contact me directly by WhatsApp or email.
+              </p>
 
-                <p className="text-base sm:text-lg font-medium mb-8 text-muted-foreground">
-                  Ready to start your project? Open the quote form or contact me directly via WhatsApp.
-                </p>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="https://tally.so/r/A7Dexe"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="h-12 rounded-full border border-white/15 bg-white px-7 text-sm font-semibold text-black hover:bg-[#eaeaea]">
+                    Open Quote Form
+                  </Button>
+                </a>
 
-                <div className="space-y-6">
-                  <a
-                    href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-3 sm:gap-4 group"
+                <a
+                  href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Button
+                    variant="outline"
+                    className="h-12 rounded-full border border-white/20 bg-transparent px-7 text-sm font-semibold text-white hover:bg-white/5"
                   >
-                    <div className="w-12 h-12 bg-[#25D366] border-2 border-foreground flex items-center justify-center text-white shrink-0">
-                      <SiWhatsapp className="w-6 h-6" />
-                    </div>
-
-                    <div className="min-w-0 flex-1">
-                      <div className="font-bold uppercase text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                        Contact Me
-                      </div>
-                      <div className="font-display text-base sm:text-xl group-hover:text-primary transition-colors break-words">
-                        +31 6 85 36 45 44
-                      </div>
-                    </div>
-                  </a>
-
-                  <a
-                    href="mailto:info@daniloworks.nl?subject=Quote%20Request%20-%20Danilo%20Works"
-                    className="flex items-center gap-3 sm:gap-4 group"
-                  >
-                    <div className="w-12 h-12 bg-primary border-2 border-foreground flex items-center justify-center text-white shrink-0">
-                      <Mail className="w-6 h-6" />
-                    </div>
-
-                    <div className="min-w-0 flex-1">
-                      <div className="font-bold uppercase text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                        Email
-                      </div>
-                      <div className="font-display text-base sm:text-xl group-hover:text-primary transition-colors break-all">
-                        info@daniloworks.nl
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                    WhatsApp
+                  </Button>
+                </a>
               </div>
+            </div>
 
-              <div className="bg-background p-8 border-2 border-foreground flex flex-col justify-center">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="font-display text-2xl uppercase mb-3">Request a Quote</h3>
-                    <p className="text-muted-foreground font-medium leading-relaxed">
-                      Fill in the quote form with your project details and photos, and I’ll get back to you as soon as possible.
-                    </p>
+            <div className="rounded-3xl border border-white/10 bg-[#111111] p-8 md:p-10">
+              <div className="space-y-8">
+                <a
+                  href="https://wa.me/31685364544?text=Hi%20Dan!%20I%20would%20like%20a%20quote."
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-start gap-4"
+                >
+                  <div className="rounded-full border border-white/10 bg-white/5 p-3">
+                    <SiWhatsapp className="h-5 w-5 text-[#25D366]" />
                   </div>
 
+                  <div>
+                    <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
+                      WhatsApp
+                    </div>
+                    <div className="mt-2 text-lg font-medium text-white transition-colors group-hover:text-[#c7a56a]">
+                      +31 6 85 36 45 44
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="mailto:info@daniloworks.nl?subject=Quote%20Request%20-%20Danilo%20Works"
+                  className="group flex items-start gap-4"
+                >
+                  <div className="rounded-full border border-white/10 bg-white/5 p-3">
+                    <Mail className="h-5 w-5 text-[#c7a56a]" />
+                  </div>
+
+                  <div>
+                    <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/40">
+                      Email
+                    </div>
+                    <div className="mt-2 break-all text-lg font-medium text-white transition-colors group-hover:text-[#c7a56a]">
+                      info@daniloworks.nl
+                    </div>
+                  </div>
+                </a>
+
+                <div className="border-t border-white/10 pt-8">
                   <a
                     href="https://tally.so/r/A7Dexe"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-white/70 transition-colors hover:text-white"
                   >
-                    <Button className="w-full h-12 rounded-none border-2 border-foreground shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all bg-primary text-white font-bold uppercase text-lg">
-                      Open Quote Form
-                    </Button>
+                    Open the quote form
+                    <ArrowRight className="h-4 w-4" />
                   </a>
-
-                  <p className="text-sm text-muted-foreground">
-                    Prefer WhatsApp? You can also send me a message directly using the contact option on the left.
-                  </p>
                 </div>
               </div>
             </div>
@@ -278,14 +313,17 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground text-white py-12 border-t-4 border-primary">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2">
-            <img src="/logo-footer.png" alt="Danilo Works Logo" className="h-14 w-auto" />
-            <span className="font-display text-xl tracking-tighter">Danilo Works</span>
+      <footer className="border-t border-white/10 bg-[#0b0b0b]">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 py-10 md:flex-row">
+          <div className="flex items-center gap-3">
+            <img src="/logo-footer.png" alt="Danilo Works Logo" className="h-12 w-auto" />
+            <span className="text-lg font-medium tracking-tight text-white/90">
+              Danilo Works
+            </span>
           </div>
-          <div className="text-sm font-medium text-white/60">
-            © {new Date().getFullYear()} Danilo Works – Klusbedrijf | KVK: 99445255 | info@daniloworks.nl
+
+          <div className="text-center text-sm text-white/40 md:text-right">
+            © {new Date().getFullYear()} Danilo Works · KVK: 99445255 · info@daniloworks.nl
           </div>
         </div>
       </footer>
